@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emulation:EmulationData xmlns:emulation="http:///emulation.ecore" isBW="true" location="/CalculationService/Tests/CalculationService.bwt">
+  <ProcessNode Id="calculationservice.CalculationService_Implementation" Name="calculationservice.CalculationService_Implementation" ModelType="BW" moduleName="CalculationService">
+    <Assertion Id="83e7a4a7-ba5e-4887-bc4a-90af1a073c27" Name="InvokeExternalService" hasDecoration="true" assertionType="Activity">
+      <Lang>urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0</Lang>
+      <Expression>&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tempuri.org/&quot; version=&quot;2E1&quot; >&lt;xsl:param name=&quot;InvokeExternalService&quot;  /> &lt;xsl:template name=&quot;InvokeExternalService&quot; match=&quot;/&quot; >&lt;xsl:variable name=&quot;activityTestInput&quot; as=&quot;item()*&quot;>&lt;Activity-Assertion> &lt;xsl:value-of select=&quot;$InvokeExternalService/tns:AddResult&quot;  /> &lt;/Activity-Assertion> &lt;/xsl:variable> &lt;xsl:variable name=&quot;AssertType&quot; as=&quot;item()*&quot;>&lt;Activity-Assertion> &lt;tns:AddResponse >&lt;tns:AddResult >&lt;xsl:value-of select=&quot;5&quot;  /> &lt;/tns:AddResult>&lt;/tns:AddResponse>&lt;/Activity-Assertion> &lt;/xsl:variable> &lt;xsl:choose>&lt;xsl:when test=&quot;$activityTestInput=$AssertType&quot;>&lt;result status=&quot;passed&quot; message=&quot;Assertion passed.&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;result status=&quot;failed&quot; message=&quot;Assertion failed.&quot;/>&lt;/xsl:otherwise>&lt;/xsl:choose> &lt;/xsl:template>&lt;/xsl:stylesheet></Expression>
+      <OriginalExpression>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tempuri.org/&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;InvokeExternalService&quot;/>&lt;xsl:template name=&quot;InvokeExternalService&quot; match=&quot;/&quot;>&lt;Activity-Assertion>&lt;activityTestInput>&lt;xsl:value-of select=&quot;$InvokeExternalService/tns:AddResult&quot;/>&lt;/activityTestInput>&lt;AssertType>&lt;tns:AddResponse>&lt;tns:AddResult>&lt;xsl:value-of select=&quot;5&quot;/>&lt;/tns:AddResult>&lt;/tns:AddResponse>&lt;/AssertType>&lt;/Activity-Assertion>&lt;/xsl:template>&lt;/xsl:stylesheet></OriginalExpression>
+    </Assertion>
+    <Operation Name="callProcess" serviceName="calculationservice.CalculationService_Implementation">
+      <Inputs Id="6615a7f6-8dfb-4862-898d-58429c7d636eCalculationService_calculationservice.CalculationService_Implementation_callProcess_Start" Name="Start" isDefault="true" type="CALLPROCESS">
+        <informations Name="input" nameSpace="http://tempuri.org/">
+          <nameSpaces prefix="tns" nameSapce="http://tempuri.org/"/>
+          <Parameter Name="tns:Add">
+            <parameters Name="tns:intA" Value="2" type="int" nameSpace="http://tempuri.org/"/>
+            <parameters Name="tns:intB" Value="2" type="int" nameSpace="http://tempuri.org/"/>
+          </Parameter>
+        </informations>
+      </Inputs>
+      <resolvedInput inputValue="&lt;tns:Add xmlns:tns='http://tempuri.org/' >&lt;tns:intA>2&lt;/tns:intA>&lt;tns:intB>2&lt;/tns:intB>&lt;/tns:Add>"/>
+    </Operation>
+  </ProcessNode>
+  <ProcessNode Id="calculationservice.ProcessRequest" Name="calculationservice.ProcessRequest" ModelType="BW" moduleName="CalculationService"/>
+</emulation:EmulationData>

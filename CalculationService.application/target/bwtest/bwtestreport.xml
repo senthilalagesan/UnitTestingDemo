@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<completeReportDTO>
+    <moduleResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="testSuiteResultDTO">
+        <codeCoverage xsi:type="processCoverageDTO">
+            <activityCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">InvokeCalculator</activityCoverage>
+            <activityCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">Start</activityCoverage>
+            <activityCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">End</activityCoverage>
+            <moduleName>CalculationService</moduleName>
+            <processName>calculationservice.ProcessRequest</processName>
+            <transitionCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">InvokeToEnd</transitionCoverage>
+            <transitionCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">StartToInvoke</transitionCoverage>
+        </codeCoverage>
+        <codeCoverage xsi:type="processCoverageDTO">
+            <activityCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">Start</activityCoverage>
+            <activityCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">End</activityCoverage>
+            <activityCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">InvokeExternalService</activityCoverage>
+            <moduleName>CalculationService</moduleName>
+            <processName>calculationservice.CalculationService_Implementation</processName>
+            <transitionCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">StartToCallProcess</transitionCoverage>
+            <transitionCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">CallProcessToEnd</transitionCoverage>
+        </codeCoverage>
+        <moduleInfo>
+            <appName>CalculationService.application</appName>
+            <appVersion>1.0</appVersion>
+            <moduleName>CalculationService</moduleName>
+            <moduleVersion>1.0.0.qualifier</moduleVersion>
+        </moduleInfo>
+        <testSetResult xsi:type="testSetResultDTO">
+            <packageName>calculationservice</packageName>
+            <processName>calculationservice.CalculationService_Implementation</processName>
+            <testCaseResult xsi:type="testCaseResultDTO">
+                <assertionFailure>1</assertionFailure>
+                <assertionResult xsi:type="assertionResultDTO">
+                    <activityName>InvokeExternalService</activityName>
+                    <assertionStatus>failed</assertionStatus>
+                    <instanceId>bw0a100</instanceId>
+                    <message>BX-200006: Assertion error @InvokeExternalService</message>
+                </assertionResult>
+                <assertions>1</assertions>
+                <assertionsRun>0</assertionsRun>
+                <processFailures>0</processFailures>
+                <testCaseFile>/CalculationService/Tests/CalculationService.bwt</testCaseFile>
+            </testCaseResult>
+        </testSetResult>
+        <testSetResult xsi:type="testSetResultDTO">
+            <packageName>calculationservice</packageName>
+            <processName>calculationservice.ProcessRequest</processName>
+        </testSetResult>
+    </moduleResult>
+</completeReportDTO>

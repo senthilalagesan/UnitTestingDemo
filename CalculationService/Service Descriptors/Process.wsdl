@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:extns="http://www.example.org/schema/1590026898754" xmlns:tns="http://www.example.org/wsdl/1590026898683" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Process" targetNamespace="http://www.example.org/wsdl/1590026898683">
+  <wsdl:import namespace="http://www.example.org/schema/1590026898754"/>
+  <wsdl:message name="InvokeAddRequest">
+    <wsdl:part element="extns:InvokeAddRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="InvokeAddResponse">
+    <wsdl:part element="extns:InvokeAddResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="Process">
+    <wsdl:operation name="InvokeAdd">
+      <wsdl:input message="tns:InvokeAddRequest" name="InvokeAddInput"/>
+      <wsdl:output message="tns:InvokeAddResponse" name="InvokeAddOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

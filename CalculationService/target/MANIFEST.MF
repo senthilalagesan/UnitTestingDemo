@@ -1,0 +1,19 @@
+Manifest-Version: 1.0.0.202005202340
+Bundle-SymbolicName: CalculationService
+Bundle-ManifestVersion: 2
+TIBCO-BW-Edition: bwcf
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tib
+ co.bw.palette; filter:="(name=bw.generalactivities)",com.tibco.bw.sha
+ redresource.model; filter:="(name=bw.httpclient)",com.tibco.bw.shared
+ resource.model; filter:="(name=bw.httpconnector)",com.tibco.bw.bindin
+ g.model; filter:="(name=bw.soap)"
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-Version: 2.5.2 V67 2020-03-05
+Bundle-Name: CalculationService Module
+Bundle-Version: 1.0.0.202005202340
+Bundle-ClassPath: .
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+
