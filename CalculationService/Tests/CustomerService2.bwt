@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emulation:EmulationData xmlns:emulation="http:///emulation.ecore" isBW="true" location="/CustomerService/Tests/CustomerService2.bwt">
+  <ProcessNode Id="customerservice.CountryInfoHelper" Name="customerservice.CountryInfoHelper" ModelType="BW" moduleName="CustomerService">
+    <Assertion Id="0079109d-b37d-420c-ad69-09ad3a2c914d" Name="InvokeGeoService" hasDecoration="true">
+      <Lang>urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0</Lang>
+      <Expression>
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.oorsprong.org/websamples.countryinfo&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;InvokeGeoService.parameters&quot;/>&lt;xsl:template match=&quot;/&quot;>&lt;xsl:choose>&lt;xsl:when test=&quot;$InvokeGeoService.parameters/tns:FullCountryInfoResult/tns:sPhoneCode='1'&quot;>&lt;result status=&quot;passed&quot; message=&quot;Assertion passed.&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;result status=&quot;failed&quot; message=&quot;Assertion failed.&quot;/>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:template>&lt;/xsl:stylesheet></Expression>
+      <OriginalExpression>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.oorsprong.org/websamples.countryinfo&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;InvokeGeoService&quot;/>&lt;xsl:template name=&quot;InvokeGeoService&quot; match=&quot;/&quot;>&lt;Primitive-Assertion>&lt;AssertType>&lt;string>&lt;testInput>&lt;xsl:value-of select=&quot;$InvokeGeoService/parameters/tns:FullCountryInfoResponse/tns:FullCountryInfoResult/tns:sPhoneCode&quot;/>&lt;/testInput>&lt;goldInput>&lt;xsl:value-of select=&quot;&amp;quot;1&amp;quot;&quot;/>&lt;/goldInput>&lt;/string>&lt;/AssertType>&lt;/Primitive-Assertion>&lt;/xsl:template>&lt;/xsl:stylesheet></OriginalExpression>
+    </Assertion>
+    <Operation Name="callProcess" serviceName="customerservice.CountryInfoHelper">
+      <Inputs Id="752f0dcf-85f4-4ba2-89d3-3fa37c3a070bCustomerService_customerservice.CountryInfoHelper_callProcess_Start" Name="Start" isDefault="true" type="CALLPROCESS">
+        <informations Name="input" nameSpace="http://www.example.org/schema/1590110348457">
+          <nameSpaces prefix="tns" nameSapce="http://www.example.org/schema/1590110348457"/>
+          <Parameter Name="tns:getCustomersByCountryCodeRequest">
+            <parameters Name="countryCode" Value="USS" type="string"/>
+          </Parameter>
+        </informations>
+      </Inputs>
+      <resolvedInput inputValue="&lt;tns:getCustomersByCountryCodeRequest xmlns:tns='http://www.example.org/schema/1590110348457' >&lt;countryCode>US&lt;/countryCode>&lt;/tns:getCustomersByCountryCodeRequest>"/>
+    </Operation>
+  </ProcessNode>
+</emulation:EmulationData>
